@@ -43,7 +43,7 @@
                                     <i class="bi bi-check2-square fs-4"></i>
                                 </a>
                             @endif
-                            <form action="/todos" method="POST" class="ms-2">
+                            <form action="/todos/{{$todos->id}}" method="POST" class="ms-2">
                                 @csrf
                                 @method('delete')
                                 <button type="submit" style="all: unset; cursor: pointer;">
