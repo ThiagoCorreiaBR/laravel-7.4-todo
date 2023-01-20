@@ -96,4 +96,10 @@ class TodoController extends Controller
 
         return redirect('/dashboard')->with('success', 'TODO deletado com sucesso');
     }
+
+    public function find(Todo $todo){
+        $count=todos::where('is_complete','=','true');
+        $result=$count->count();
+        return view('dashboard', compact('result'));
+    }
 }
